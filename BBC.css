@@ -1,0 +1,296 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-family: Arial, Helvetica, Freesans, sans-serif;
+}
+
+h1, h3, h2, p, span{
+  font-family: Arial, Helvetica, Freesans, sans-serif;
+  text-align: left;
+}
+
+
+
+h1{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #f5f5f5;
+}
+
+h2{
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+
+h3{
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+p{
+  line-height: 20px;
+  font-size: 16px;
+  color: #504d4d;
+}
+
+a{
+  font-size: 14px;
+  line-height: 14px;
+}
+
+span a{
+  color: #888;
+}
+
+nav a:hover{
+  border-bottom: 5px solid blue;
+  cursor: pointer;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+nav *{
+  
+  background: #000;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.bbc_logo{
+  width: 100%;
+  /* height: 30px; */
+}
+
+ul{
+  list-style-type: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+}
+
+li{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding: 0 20px;
+  height: 100%;
+  border-right: 0.3px solid #f5f5f5;
+}
+
+li:last-child{
+  border: none;
+}
+
+nav a{
+  text-decoration: none;
+  color: #fff;
+}
+
+li.sign_in{
+  width: 150px;
+  justify-content: left;
+}
+
+.fa-user-circle{
+  top: 10px;
+  right: 10px;
+  background: none;
+  font-size: large;
+}
+
+.select{
+  border: none;
+  color: #fff;
+  top: 2px;
+  right: 10px;
+  background: none;
+}
+
+.search{
+  background: #fff;
+  border: none;
+  height: 25px;
+  
+}
+
+::placeholder{
+  color: #000;
+}
+
+.fa-search{
+  background: none;
+  color: #000;
+  right: 24px;
+  top: 12px;
+}
+
+
+/*******************************************
+First_Section
+/*******************************************/
+
+.main-container{
+  display: block;
+  margin: 40px auto;
+  width: 90%;
+}
+
+
+.top{
+  margin-bottom: 20px;
+  margin-right: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+section{
+  display: flex;
+  width: 100%;
+}
+
+section img{
+  width: 100%;
+}
+
+.first_section_container{
+  display: flex;
+  column-gap: 20px;
+}
+
+
+.first_section_container section{
+  flex-basis: 50%;
+  flex-wrap: wrap;
+}
+
+.right_first_section div{
+  flex-basis: calc(50% - 20px);
+}
+
+.first_section article{
+  z-index: 1;
+  position: absolute;
+  bottom: 10px;
+  left: 4px;
+}
+
+.first_section{
+  position: relative;
+  height: fit-content;
+}
+
+.right_first_section{
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+.article-3{
+  color: #fff;
+}
+
+.bbc-main-1{
+  width: 590px;
+  height: 347px;
+}
+
+.bbc-main-2{
+  height: 167px;
+}
+
+.bbc-main-3{
+  height: 170px;
+}
+
+
+
+/******************************************
+/* first_Section
+/*******************************************/
+
+.second_section{
+  display: flex;
+  margin-top: 50px;
+  flex-basis: 33.33%;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.second_section > div{
+  flex-basis: calc(33.33% - 20px);
+}
+
+article.second{
+  margin-top: 10px;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media only screen and (max-width: 600px){
+  
+  header, .top{
+    display: none;
+  }
+
+  .first_section_container, .second_section, .right_first_section {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .main-container{
+    width: auto;
+  }
+
+  .bbc-main-2, .bbc-main-3{
+    /* display: none; */
+    width: 90%;
+    height: 100%;
+    margin: auto 5%;
+  }
+  .bbc-main-1{
+    margin: auto 2.5%;
+    width: 95%;
+    height: 100%;
+  }
+
+  h1, h3, h2, p, a{
+    margin: auto 5%;
+    align-items: center;
+  }
+
+  
+
+}
